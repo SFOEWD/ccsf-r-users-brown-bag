@@ -1,0 +1,87 @@
+---
+title: "Run All"
+output: html_notebook
+---
+
+* Primary Author: name, email.
+* Project Started: 12/18/2018
+* Project Close Out: 
+* Package Snapshot date: 12/18/2018.
+* System: Windows 10/ Mac OSX.
+* R Version: 
+
+*This script will run (in order) all neccessary scripts and Rmds to generate final output.*
+
+#Project 
+##Overview
+
+High level description
+
+## Details
+
++ source data stored where?
++ Project partners
++ final hand off was what...
+
+
+## Scripts
+### Overview Table
+
+| Input              	| Code               	| Output             	|
+|--------------------	|--------------------	|--------------------	|
+| raw data           	| smell-test.R       	| wisdom             	|
+| raw data           	| wrangleR 	          | data_cleaned       	|
+| xxxxxxxxxxxxxxxxxx 	| xxxxxxxxxxxxxxxxxx 	| xxxxxxxxxxxxxxxxxx 	|
+| xxxxxxxxxxxxxxxxxx 	| xxxxxxxxxxxxxxxxxx 	| xxxxxxxxxxxxxxxxxx 	|
+_use tab to fix lineup_
+
+
+### Always Run Scripts
+
+```{r}
+source(here::here("always_run","libraries.R"))
+source(here::here("always_run","functions.R"))
+source(here::here("always_run","options.R"))
+
+```
+
+
+### Clean Up Scripts
+description
+
+```{r}
+#source(here::here("cleanup","import.R"))
+#rmarkdown::render(here::here('cleanup','import.Rmd'))
+```
+
+### Analysis Scripts
+description
+
+```{r}
+
+```
+
+
+### Modeling Scripts
+description
+
+```{r}
+
+```
+
+
+#Project Template Readme
+
+## Project start up checklist
+
+* checkpoint 
+* git 
+* ????
+
+## Project close out checklist
+
+* final checkpoint date entered
+* confirm full run with raw data
+* final location of raw data documented
+* ???
+

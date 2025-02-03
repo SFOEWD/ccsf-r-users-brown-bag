@@ -1,0 +1,17 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+*.csv
+*.zip
+*.dbf
+*.prj
+*.shp
+*.shx
+*.xls
+*.xlsx
+*.pdf
