@@ -1,0 +1,45 @@
+---
+title: "Tables in R"
+subtitle: "Brown Bag Lunch"
+author: "Data and Performance Team (OEWD)"
+date: "`r Sys.Date()`"
+---
+
+# Load packages
+
+```{r}
+library(gt)
+library(reactable)
+library(reactablefmtr)
+library(tinytable)
+library(tidyverse)
+```
+
+```{r}
+library(gtExtras)
+base_tab <- dplyr::tibble(x = seq(1, 100, length.out = 6)) %>%
+  dplyr::mutate(
+    x_unscaled = x,
+    x_scaled = x / max(x) * 100
+  ) %>%
+  gt()
+
+base_tab %>%
+  gt_plt_bar_pct(
+    column = x_unscaled,
+    scaled = TRUE,
+    fill = "forestgreen"
+  ) %>%
+  gt_plt_bar_pct(
+    column = x_scaled,
+    scaled = FALSE,
+    labels = TRUE
+  )
+```
+
+
+# About this Report
+
+This HTML report was created with [Quarto.](https://quarto.org/) The data within is self-contained and cannot be updated automatically. If you bookmark the report within your browser, be aware that the bookmark URL references a file path on your computer; moving the document to a different location will break the bookmark.
+
+![](_extensions/SFOEWD/oewd-report/assets/OEWD%20Circle%20Logo.png){fig-align="center" width="225"}
