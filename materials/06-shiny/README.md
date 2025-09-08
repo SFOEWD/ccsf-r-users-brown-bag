@@ -18,7 +18,7 @@ mapview(streets)
 
 5. QGIS setting "Statistics extent: Updated canvas"
 
-![]("qgis_screenshot.png")
+![](qgis_screenshot.png)
 
 6. Shiny and Leaflet
 * https://rstudio.github.io/leaflet/articles/shiny.html
