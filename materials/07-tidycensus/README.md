@@ -8,7 +8,7 @@
     * [San Francisco Population and Demographic Census Data](https://data.sfgov.org/Economy-and-Community/San-Francisco-Population-and-Demographic-Census-Da/4qbq-hvtt/about_data)
     * [Crosswalk for Census data and SF neighborhood/supervisor district](https://data.sfgov.org/Geographic-Locations-and-Boundaries/Analysis-Neighborhoods-2020-census-tracts-assigned/sevw-6tgi/about_data)
 
-2. tidycensus demo R script **(DAVID PLEASE LINK IT HERE)**
+2. [tidycensus demo R script](https://github.com/SFOEWD/ccsf-r-users-brown-bag/blob/main/materials/07-tidycensus/tidycensus_demo%201.R)
 
 3. Basic Usage
     1. [Request a U.S. Census Data API Key](https://api.census.gov/data/key_signup.html)
