@@ -9,4 +9,5 @@ This repo contains the materials for past 'Brown Bag Lunches with R' at CCSF.
 5. [Making cool tables](./materials/05-tables/)
 6. [Shiny](./materials/06-shiny/)
 7. [tidycensus](./materials/07-tidycensus/)
+8. [ipumsr](./materials/08-ipumsr/)
    
