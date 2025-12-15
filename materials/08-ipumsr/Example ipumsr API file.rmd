@@ -1,0 +1,107 @@
+---
+title: "ipumsr API example"
+---
+
+Ipums:
+
+https://www.ipums.org/
+
+https://usa.ipums.org/usa/
+
+https://developer.ipums.org 
+
+ipumsr:
+
+https://tech.popdata.org/ipumsr/ 
+
+https://tech.popdata.org/ipumsr/articles/ipums.html
+
+https://cran.r-project.org/web/packages/ipumsr/
+
+https://cran.r-project.org/web/packages/ipumsr/vignettes/ipums-api.html
+
+
+```{r}
+
+install.packages("ipumsr")
+
+library(ipumsr)
+library(tidyverse)
+
+```
+
+```{r}
+
+#Set API Key
+
+set_ipums_api_key("59cba10d8a5da536fc06b59d36864a283d79483caee4abfb73806ad8", save = TRUE)
+
+```
+
+```{r}
+
+#Variable Specification. See ACS_State_County_Crosswalk
+
+STATEFIP_CA <- var_spec(
+  "STATEFIP",
+  case_selections = "6"
+)
+
+```
+
+```{r}
+
+usa_extract_definition <- define_extract_micro(
+  collection = "usa",
+  description = "USA extract for API vignette",
+  samples = c("us2023c"),
+  variables = list(STATEFIP_CA, "COUNTYICP", "US2023C_PWGTP", "US2023C_SEX", "US2023C_ESR", 
+                "US2023C_HISP", "US2023C_RAC1P", "US2023C_RAC3P", "US2023C_SOCP"),
+  data_format = "csv") 
+
+usa_extract_definition
+
+```
+
+```{r}
+
+#submit access request
+
+usa_extract_submitted <- submit_extract(usa_extract_definition)
+
+```
+
+```{r}
+
+#Check Status of API request
+
+usa_extract_submitted$status
+
+```
+
+```{r}
+
+#Check Status of API request
+
+is_extract_ready(usa_extract_submitted)
+
+```
+
+```{r}
+#Check Status of API request
+
+usa_extract_complete <- wait_for_extract(usa_extract_submitted)
+
+```
+
+```{r}
+
+#Download extract
+
+usa_data <- download_extract(
+  usa_extract_submitted,
+  download_dir = "C:\\Users\\Daniel.Milman\\Documents\\ipumsr_example",
+  overwrite = TRUE
+)  
+
+```
