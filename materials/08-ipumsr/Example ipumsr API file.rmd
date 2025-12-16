@@ -34,7 +34,7 @@ library(tidyverse)
 
 #Set API Key
 
-set_ipums_api_key("59cba10d8a5da536fc06b59d36864a283d79483caee4abfb73806ad8", save = TRUE)
+set_ipums_api_key("<redacted>", save = TRUE)
 
 ```
 
